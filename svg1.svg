@@ -5,7 +5,7 @@
   <polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
   <script type="text/javascript">
     setTimeout(function() {
-    location.reload();
+    location.replace(location.href); // Refresh the page
   }, 2000);
   </script>
 </svg>
