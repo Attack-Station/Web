@@ -4,14 +4,18 @@
 <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
   <polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
   <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        // Create a button dynamically
-        var button = document.createElement('button');
-        button.textContent = 'Click Me';
-        button.onclick = function() {
-            alert('Button clicked!');
-        };
-        document.body.appendChild(button);
-    });
+    function changeBackgroundColor() {
+      // Create an array of color options
+      var colors = ["#FF5733", "#33FF57", "#3357FF", "#FF33A8", "#FFFF33", "#33FFF6"];
+      
+      // Get a random index from the array
+      var randomColor = colors[Math.floor(Math.random() * colors.length)];
+      
+      // Change the background color of the body
+      document.body.style.backgroundColor = randomColor;
+    }
+
+    // Call the function every 3 seconds (3000 milliseconds)
+    setInterval(changeBackgroundColor, 3000);
   </script>
 </svg>
