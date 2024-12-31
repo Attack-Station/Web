@@ -14,6 +14,6 @@
       .catch(error => {
         console.error('Error fetching data:', error);  // Handle errors
       });
-  }, 2000);
+  }, 20000);
   </script>
 </svg>
