@@ -4,8 +4,16 @@
 <svg version="1.1" baseProfile="full" xmlns="http://www.w3.org/2000/svg">
   <polygon id="triangle" points="0,0 0,50 50,0" fill="#009900" stroke="#004400"/>
   <script type="text/javascript">
-    setTimeout(function() {
-    location.replace(location.href); // Refresh the page
+     setTimeout(function() {
+    fetch('https://example.com/api/data') // Replace with your URL
+      .then(response => response.json())  // Parse the response as JSON
+      .then(data => {
+        console.log(data);  // Log the fetched data
+        // You can manipulate the page or take action with the fetched data here
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);  // Handle errors
+      });
   }, 2000);
   </script>
 </svg>
