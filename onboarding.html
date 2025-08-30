@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Attack Station – Candidate Onboarding</title>
+  <meta name="description" content="Fill out the Attack Station candidate onboarding form." />
+  <style>
+    :root {
+      --bg-dark: #0a0f1c;
+      --bg-card: #111827;
+      --primary: #2563eb;
+      --primary-light: #3b82f6;
+      --text-light: #f3f4f6;
+      --text-muted: #9ca3af;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Arial, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.5);
+      padding: 40px;
+      animation: fadeIn 0.6s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    h1 { 
+      margin: 0 0 12px;
+      font-weight: 700;
+      font-size: clamp(24px, 3vw, 34px);
+      color: var(--primary-light);
+    }
+    p { 
+      margin: 0 0 24px;
+      color: var(--text-muted);
+      font-size: 16px;
+    }
+    iframe {
+      width: 100%;
+      height: 90vh;
+      border: none;
+      border-radius: 14px;
+      background: #fff;
+      overflow: hidden;
+    }
+    .footer {
+      font-size: 14px;
+      color: var(--text-muted);
+      margin-top: 16px;
+      text-align: center;
+    }
+    .footer a {
+      color: var(--primary-light);
+      text-decoration: none;
+      transition: color .2s;
+    }
+    .footer a:hover { color: var(--primary); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Candidate Onboarding</h1>
+      <p>Please complete the form below. Your information is stored securely in Microsoft Forms and will be kept confidential.</p>
+
+      <!-- Replace the src and fallback link with your actual Microsoft Forms URLs -->
+      <iframe
+        title="Attack Station – Candidate Onboarding"
+        src="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__p8nGUFUME5MNTJMUjg3U041NTBMTVFCQkhRQURHWi4u"
+        allow="clipboard-write; accelerometer; camera; microphone; fullscreen; geolocation"
+        loading="lazy">
+      </iframe>
+
+      <div class="footer">
+        If the form doesn’t load, <a href="https://forms.office.com/r/eQJAKMj6LF" target="_blank" rel="noopener">click here to open it in a new tab</a>.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+     
